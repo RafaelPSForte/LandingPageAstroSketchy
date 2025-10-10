@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    background: #0d0014;
+    color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas#stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top, #1b0b3b, #0d0014);
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem;
+    max-width: 500px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(255,255,255,0.1);
+}
+
+header h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffe600;
+    text-shadow: 0 0 10px #ffe600, 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #fff8;
+}
+
+.ebook img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 30px #ff00ff, 0 0 60px #ffe600;
+}
+
+.ebook p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.btn-hotmart {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #ff00ff, #ffe600);
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px #ff00ff, 0 0 40px #ffe600;
+}
+
+.btn-hotmart:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #ff00ff, 0 0 60px #ffe600;
+}
+
+footer {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #aaa;
+}
