@@ -1,59 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AstroSignos - Descubra seu destino nas estrelas</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Secretos Ocultos del Zodiaco</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>AstroSignos</h1>
-      <p>Descubra o que os astros revelam sobre você e seu signo.</p>
-      <a href="#form" class="btn">Descubra Agora</a>
+    <canvas id="stars"></canvas>
+    <div class="container">
+        <header>
+            <h1>Los Secretos Ocultos del Zodiaco</h1>
+            <p>Descubre los misterios que los astros esconden para ti</p>
+        </header>
+
+        <section class="ebook">
+            <img src="https://via.placeholder.com/300x400.png?text=Portada+del+E-book" alt="Portada del E-book">
+            <p>Sumérgete en el mundo místico de los signos y revela secretos ocultos que cambiarán tu vida.</p>
+            <a href="#" class="btn-hotmart">Comprar ahora</a>
+        </section>
+
+        <footer>
+            <p>© 2025 Los Secretos Ocultos del Zodiaco</p>
+        </footer>
     </div>
-  </header>
 
-  <section class="about">
-    <h2>Sobre Nós</h2>
-    <p>Na <strong>AstroSignos</strong>, acreditamos que cada pessoa carrega consigo uma energia única influenciada pelas estrelas. Nosso objetivo é ajudar você a compreender melhor sua personalidade, seu destino e suas afinidades por meio da astrologia.</p>
-  </section>
-
-  <section class="signs">
-    <h2>Os 12 Signos do Zodíaco</h2>
-    <div class="sign-grid">
-      <div class="sign">♈ Áries</div>
-      <div class="sign">♉ Touro</div>
-      <div class="sign">♊ Gêmeos</div>
-      <div class="sign">♋ Câncer</div>
-      <div class="sign">♌ Leão</div>
-      <div class="sign">♍ Virgem</div>
-      <div class="sign">♎ Libra</div>
-      <div class="sign">♏ Escorpião</div>
-      <div class="sign">♐ Sagitário</div>
-      <div class="sign">♑ Capricórnio</div>
-      <div class="sign">♒ Aquário</div>
-      <div class="sign">♓ Peixes</div>
-    </div>
-  </section>
-
-  <section id="form" class="cta">
-    <h2>Quer saber mais sobre seu signo?</h2>
-    <p>Preencha com seu nome e data de nascimento e receba uma leitura gratuita.</p>
-    <form id="astroForm">
-      <input type="text" id="nome" placeholder="Seu nome" required />
-      <input type="date" id="data" required />
-      <button type="submit" class="btn">Revelar</button>
-    </form>
-    <p id="resultado" class="resultado"></p>
-  </section>
-
-  <footer>
-    <p>© 2025 AstroSignos. Todos os direitos reservados.</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
