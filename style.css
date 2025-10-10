@@ -90,3 +90,24 @@ footer {
     font-size: 0.8rem;
     color: #aaa;
 }
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000; /* ajusta según tu diseño */
+}
+
+.tiktok-link {
+  color: white;
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-block;
+}
+
+.tiktok-link:hover {
+  color: #69C9D0; /* color oficial de TikTok */
+  transform: scale(1.1);
+}
+
+.tiktok-icon {
+  width: 32px;
+  height: 32px;
+}
