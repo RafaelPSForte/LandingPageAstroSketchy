@@ -1,66 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astro Sketchy</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Sketchy</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="stars"></canvas>
-    <div class="container">
-        <header>
-            <h1>Bienvenido a Astro Sketchy</h1>
-            <p>Descubre los misterios que los astros esconden para ti</p>
-        </header>
+    <canvas id="stars"></canvas>
 
-        <section class="ebook">
-            <img src="https://via.placeholder.com/300x400.png?text=Portada+del+E-book" alt="Portada del E-book">
-            <p>Sumérgete en el mundo místico de los signos y revela secretos ocultos que cambiarán tu vida.</p>
-            <a href="#" class="btn-hotmart">Comprar ahora</a>
-        </section>
+    <div class="container">
+        <header>
+            <h1>Bienvenido a <span class="highlight">Astro Sketchy</span></h1>
+            <p>Descubre los misterios que los astros esconden para ti ✨</p>
+        </header>
 
-        <section class="reviews">
-            <h2>Lo que dicen nuestros lectores</h2>
-            <div class="carousel-container">
-                <button class="carousel-btn prev-btn">&lt;</button>
-                <div class="reviews-wrapper">
-                    <div class="reviews-grid">
-                        <div class="review-card">
-                            <img src="https://via.placeholder.com/80x80.png?text=Ana" alt="Foto de Ana M." class="review-avatar">
-                            <p class="review-text">"Me abrió los ojos a secretos que no sabía. Una lectura muy clara y reveladora."</p>
-                            <p class="review-author">Ana M.</p>
-                            <p class="review-title">Entusiasta Astrológica</p>
-                        </div>
-                        <div class="review-card">
-                            <img src="https://via.placeholder.com/80x80.png?text=Carlos" alt="Foto de Carlos P." class="review-avatar">
-                            <p class="review-text">"¡Increíble! Desde que lo leí, mi perspectiva ha cambiado totalmente. Recomiendo 100%."</p>
-                            <p class="review-author">Carlos P.</p>
-                            <p class="review-title">Buscador de Conocimiento</p>
-                        </div>
-                        <div class="review-card">
-                            <img src="https://via.placeholder.com/80x80.png?text=Laura" alt="Foto de Laura R." class="review-avatar">
-                            <p class="review-text">"El diseño es hermoso y el contenido vale cada centavo. Una joya astrológica."</p>
-                            <p class="review-author">Laura R.</p>
-                            <p class="review-title">Amante del Universo</p>
-                        </div>
-                        <div class="review-card">
-                            <img src="https://via.placeholder.com/80x80.png?text=Miguel" alt="Foto de Miguel S." class="review-avatar">
-                            <p class="review-text">"Un libro que te hace reflexionar y conectar con tu verdadero yo astrológico."</p>
-                            <p class="review-author">Miguel S.</p>
-                            <p class="review-title">Conocedor del Zodiaco</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-btn next-btn">&gt;</button>
-            </div>
-        </section>
+        <section class="ebook">
+            <img src="https://via.placeholder.com/300x400.png?text=Portada+del+E-book" alt="Portada del E-book">
+            <p>Sumérgete en el universo de los signos y descubre secretos que cambiarán tu forma de ver el destino.</p>
+            <a href="https://www.hotmart.com" class="btn-hotmart" target="_blank" rel="noopener noreferrer">Comprar ahora</a>
+            <p class="garantia">🌀 Garantía de reembolso por 7 días después de la compra</p>
+        </section>
 
-        <footer>
-            <p>© 2025 Astro Sketchy</p>
-        </footer>
-    </div>
+        <section class="reviews">
+            <h2>Lo que dicen nuestros lectores</h2>
 
-    <script src="script.js"></script>
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn">&lt;</button>
+
+                <div class="reviews-wrapper">
+                    <div class="reviews-grid">
+                        <div class="review-card">
+                            <p class="review-text">"Me abrió los ojos a secretos que no sabía. Una lectura muy clara y reveladora."</p>
+                            <p class="review-author">Ana M.</p>
+                            <p class="review-title">Entusiasta Astrológica</p>
+                        </div>
+
+                        <div class="review-card">
+                            <p class="review-text">"¡Increíble! Desde que lo leí, mi perspectiva ha cambiado totalmente. Recomiendo 100%."</p>
+                            <p class="review-author">Carlos P.</p>
+                            <p class="review-title">Buscador de Conocimiento</p>
+                        </div>
+
+                        <div class="review-card">
+                            <p class="review-text">"El diseño es hermoso y el contenido vale cada centavo. Una joya astrológica."</p>
+                            <p class="review-author">Laura R.</p>
+                            <p class="review-title">Amante del Universo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn next-btn">&gt;</button>
+            </div>
+        </section>
+
+        <footer>
+            <div class="socials">
+                <a href="https://www.tiktok.com/@astrosketchy" target="_blank" rel="noopener noreferrer">
+                    <img src="/imgs/tiktok.png" alt="TikTok" class="tiktok-icon">
+                </a>
+            </div>
+            <p>© 2025 Astro Sketchy — Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
