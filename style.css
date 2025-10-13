@@ -1,222 +1,239 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&display=swap');
-
-/* ======== Variables ======== */
 :root {
-    --font-primary: 'Montserrat', sans-serif;
-    --font-heading: 'Libre Baskerville', serif;
-    --color-bg: #0d0014;
-    --color-bg-alt: #1b0b3b;
-    --color-text: #f5f5f5;
-    --color-text-muted: rgba(255, 255, 255, 0.8);
-    --color-highlight: #ffe600;
-    --color-accent: #ff00ff;
-    --transition: all 0.3s ease;
+  --color-bg: #050010;
+  --color-text: #f2e8ff;
+  --color-accent: #a36bff;
+  --color-highlight: #ff9bf5;
+  --transition: all 0.3s ease;
 }
 
-/* ======== Reset ======== */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    width: 100%;
-    min-height: 100vh;
-    font-family: var(--font-primary);
-    background: var(--color-bg);
-    color: var(--color-text);
-    overflow-x: hidden;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  overflow-x: hidden;
+  position: relative;
 }
 
-/* ======== Background ======== */
-canvas#stars {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at top, var(--color-bg-alt), var(--color-bg));
+/* 🌠 Fundo de estrelas animado */
+#stars, #stars2, #stars3 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: repeat;
+  background-size: contain;
+  animation: animStar 50s linear infinite;
+  z-index: 0;
 }
 
-/* ======== Container ======== */
-.container {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    padding: 2rem;
-    max-width: 960px;
-    width: 90%;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 20px;
+#stars {
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  animation-duration: 80s;
 }
 
-/* ======== Header ======== */
-header h1 {
-    font-family: var(--font-heading);
-    font-size: 2.6rem;
-    color: var(--color-highlight);
-    margin-bottom: 0.5rem;
-    text-shadow: 0 0 10px var(--color-highlight), 0 0 30px var(--color-accent);
+#stars2 {
+  background-image: url('https://www.transparenttextures.com/patterns/tiny-stars.png');
+  animation-duration: 100s;
 }
 
-header .highlight {
-    color: var(--color-accent);
+#stars3 {
+  background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+  animation-duration: 120s;
 }
 
-header p {
-    font-size: 1.1rem;
-    color: var(--color-text-muted);
-    margin-bottom: 2rem;
+@keyframes animStar {
+  from { background-position: 0 0; }
+  to { background-position: 10000px 10000px; }
 }
 
-/* ======== Ebook Section ======== */
-.ebook img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 15px;
-    box-shadow: 0 0 40px var(--color-accent), 0 0 60px var(--color-highlight);
-    margin-bottom: 1.5rem;
+/* Hero */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
 }
 
-.ebook p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    line-height: 1.5;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  background: rgba(10, 0, 30, 0.6);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  box-shadow: 0 0 40px rgba(255, 0, 255, 0.2);
+  backdrop-filter: blur(10px);
 }
 
-.garantia {
-    font-size: 0.9rem;
-    color: var(--color-highlight);
-    margin-top: 1rem;
-    font-weight: bold;
+.hero h1 {
+  font-size: 2.8rem;
+  color: var(--color-highlight);
+  text-shadow: 0 0 25px var(--color-accent);
+  margin-bottom: 1rem;
 }
 
-/* ======== Botón ======== */
-.btn-hotmart {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: linear-gradient(45deg, var(--color-accent), var(--color-highlight));
-    color: #000;
-    font-weight: bold;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: var(--transition);
-    box-shadow: 0 0 20px var(--color-accent), 0 0 40px var(--color-highlight);
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
-.btn-hotmart:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px var(--color-accent), 0 0 60px var(--color-highlight);
+.cta-button {
+  background: linear-gradient(45deg, var(--color-accent), var(--color-highlight));
+  color: #000;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
 }
 
-/* ======== Reviews ======== */
+.cta-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.8);
+}
+
+/* Frase de reembolso */
+.refund-text {
+  margin-top: 1.2rem;
+  color: #d4bfff;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* TikTok Button */
+.tiktok-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1.8rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-highlight);
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tiktok-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+}
+
+.tiktok-button i {
+  font-size: 1.2rem;
+}
+
+/* Reviews Section */
 .reviews {
-    margin-top: 4rem;
-    padding: 2rem 1rem;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 20px;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: rgba(10, 0, 20, 0.4);
+  backdrop-filter: blur(4px);
 }
 
 .reviews h2 {
-    font-family: var(--font-heading);
-    font-size: 2.2rem;
-    color: var(--color-highlight);
-    text-shadow: 0 0 15px var(--color-accent);
-    margin-bottom: 2rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-highlight);
+  text-shadow: 0 0 15px var(--color-accent);
 }
 
-/* ======== Carousel ======== */
 .carousel-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 700px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.carousel-btn {
-    background: linear-gradient(45deg, var(--color-accent), var(--color-highlight));
-    border: none;
-    color: #000;
-    font-size: 1.5rem;
-    border-radius: 50%;
-    padding: 0.8rem 1.2rem;
-    cursor: pointer;
-    transition: var(--transition);
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.carousel-btn:hover {
-    transform: translateY(-50%) scale(1.1);
-}
-
-.prev-btn { left: -20px; }
-.next-btn { right: -20px; }
-
-/* ======== Review Cards ======== */
-.reviews-wrapper {
-    overflow: hidden;
-    width: 100%;
+  position: relative;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .reviews-grid {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    gap: 1.5rem;
+  display: flex;
+  gap: 24px;
+  transition: transform 0.5s ease;
+  will-change: transform;
 }
 
 .review-card {
-    background: var(--color-bg-alt);
-    border: 2px solid var(--color-accent);
-    border-radius: 15px;
-    padding: 2rem 1.5rem;
-    text-align: center;
-    min-width: 300px;
-    box-shadow: 0 5px 20px rgba(255, 0, 255, 0.2);
+  flex: 0 0 calc(50% - 12px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px rgba(163, 107, 255, 0.2);
 }
 
-.review-avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    border: 3px solid var(--color-highlight);
+.review-card p {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #e0caff;
 }
 
-.review-text {
-    font-style: italic;
-    margin-bottom: 1rem;
+.review-card span {
+  font-weight: bold;
+  color: var(--color-highlight);
 }
 
-.review-author {
-    font-weight: bold;
-    color: var(--color-highlight);
+/* Carousel Buttons */
+.carousel-btn {
+  background: linear-gradient(45deg, var(--color-accent), var(--color-highlight));
+  border: none;
+  color: #000;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
 }
 
-/* ======== Footer ======== */
+.carousel-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.7);
+}
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+@media (max-width: 768px) {
+  .review-card { flex: 0 0 100%; }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+
+  .prev-btn { left: 5px; }
+  .next-btn { right: 5px; }
+}
+
+/* Footer */
 footer {
-    margin-top: 3rem;
-    font-size: 0.85rem;
-    color: #ccc;
-}
-
-footer .socials {
-    margin-bottom: 1rem;
-}
-
-.tiktok-icon {
-    width: 35px;
-    transition: transform 0.3s ease;
-}
-
-.tiktok-icon:hover {
-    transform: scale(1.2);
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: #bbb;
+  font-size: 0.9rem;
+  backdrop-filter: blur(6px);
 }
